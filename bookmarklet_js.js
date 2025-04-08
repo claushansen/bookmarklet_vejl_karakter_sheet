@@ -17,8 +17,8 @@ require(["xlsx"], function (XLSX) {
     }
 
     // Overskriftsrækken med ekstra kolonne til Gennemsnit
-    var header = ["Navn", "Dansk", "Engelsk", "Informatik", "Samfundsfag",
-        "markedskommunikation", "Virksomhedsøkonomi", "Erhvervsjura",
+    var header = ["Navn", "Dansk Mundligt", "Dansk Skriftligt", "Engelsk Mundtligt", "Engelsk Skriftligt", "Informatik", "Samfundsfag",
+        "Markedskommunikation", "Virksomhedsøkonomi", "Erhvervsjura",
         "Gennemsnit"];
     var sheet1Data = [header];
     var sheet2Data = [header];
@@ -40,8 +40,8 @@ require(["xlsx"], function (XLSX) {
         // Benyt IFERROR: AVERAGE(...) → IFERROR(AVERAGE(...), "")
         var row = [
             fuldtNavn,
-            "", "", "", "", "", "", "",
-            { f: "IFERROR(AVERAGE(B" + excelRowNum + ":H" + excelRowNum + "), \"\")" }
+            "", "", "", "", "", "", "", "", "",
+            { f: "IFERROR(AVERAGE(B" + excelRowNum + ":K" + excelRowNum + "), \"\")" }
         ];
         sheet1Data.push(row);
         sheet2Data.push(row);
