@@ -41,7 +41,7 @@ require(["xlsx"], function (XLSX) {
         var row = [
             fuldtNavn,
             "", "", "", "", "", "", "", "", "",
-            { f: "IFERROR(AVERAGE(B" + excelRowNum + ":K" + excelRowNum + "), \"\")" }
+            { f: "IFERROR(AVERAGE(B" + excelRowNum + ":J" + excelRowNum + "), \"\")" }
         ];
         sheet1Data.push(row);
         sheet2Data.push(row);
